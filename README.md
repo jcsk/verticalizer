@@ -1,4 +1,4 @@
-# Video Analysis Project
+# Verticalizer
 
 ## Overview
 
@@ -28,28 +28,9 @@ This project converts a landscape video (e.g., 16:9) to a portrait format (9:16)
 
 ## Installation
 
-1. **Clone the repository**:
 
-    ```bash
-    git clone https://github.com/yourusername/video_analysis_project.git
-    cd video_analysis_project
-    ```
 
-2. **Install Homebrew (macOS only)**:
-
-    If not already installed, install Homebrew using:
-
-    ```bash
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-
-3. **Install FFmpeg Using Homebrew (macOS)**:
-
-    ```bash
-    brew install ffmpeg
-    ```
-
-4. **Install Dependencies**:
+1. **Install Dependencies**:
 
     It's recommended to use a virtual environment.
 
@@ -60,7 +41,7 @@ This project converts a landscape video (e.g., 16:9) to a portrait format (9:16)
     pip install -r requirements.txt
     ```
 
-5. **Install `dlib`**:
+2. **Install `dlib`**:
 
     ```bash
     brew install cmake boost
@@ -69,13 +50,6 @@ This project converts a landscape video (e.g., 16:9) to a portrait format (9:16)
 
     **Note:** Ensure that `cmake` and `boost` are installed via Homebrew before installing `dlib` via `pip`.
 
-6. **Verify FFmpeg Installation**:
-
-    ```bash
-    ffmpeg -version
-    ```
-
-    You should see the installed FFmpeg version.
 
 ## Usage
 
@@ -94,16 +68,7 @@ This project converts a landscape video (e.g., 16:9) to a portrait format (9:16)
     - The final cropped video will be saved as specified in `config.py` (default: `final_cropped_video.mp4`).
     - A log file named `video_analysis.log` will be created in the project directory, detailing the processing steps and any issues encountered.
 
-## Logging
 
-The project uses Python's built-in `logging` module to provide detailed logs of the processing stages. Logs are output to both the console and a log file named `video_analysis.log`.
-
-- **Log Levels**:
-  - `INFO`: General information about the processing stages.
-  - `DEBUG`: Detailed diagnostic information (enabled by setting the log level to `DEBUG` in `utils.py`).
-  - `WARNING`: Potential issues that aren't critical.
-  - `ERROR`: Errors that occur during processing.
-  - `CRITICAL`: Severe errors that may halt the program.
 
 **To Enable Debug Logging**:
 
